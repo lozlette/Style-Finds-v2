@@ -1,5 +1,24 @@
 {
+  "name": "practicesetup",
+  "version": "1.0.0",
+  "description": "A practice app to find out how to do this",
+  "homepage": "https://github.com/lozlette/PracticeProject01",
+  "licence": "UNLICENSED",
+  "private": "true",
+  "main": "index.js",
+  "scripts": {
+    "serve:flask": "flask run",
+    "start:react": "webpack serve --open",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
   "dependencies": {
-    "flask": "^0.2.10"
+    "flask": "^0.2.10",
+    "html-webpack-plugin": "^5.5.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
