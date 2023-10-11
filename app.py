@@ -5,7 +5,9 @@ from flask_marshmallow import Marshmallow
 
 app = Flask(__name__)
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////tmp/test.db"
+app.app_context().push()
+
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///practiceproject01/practice.db"
 
 db = SQLAlchemy(app)
 
@@ -15,5 +17,7 @@ ma = Marshmallow(app)
 def helloworld():
     return "Hello World"
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
+
+from config import routes
