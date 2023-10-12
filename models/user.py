@@ -7,6 +7,7 @@ class User(db.Model):
     email = db.Column(db.String)
     name = db.Column(db.String)
     age = db.Column(db.Integer)
+    # date_created = db.Column(datetime, auto_now_add=True)
 
 
 class UserSchema(ma.SQLAlchemySchema):
