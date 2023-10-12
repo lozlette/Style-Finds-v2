@@ -4,8 +4,8 @@ from models.user import users_schema, user_schema, User
 
 @app.route("/api/users/", methods=['GET'])
 def users():
-    all_users = dir(User)
-    print(User.name)
+    all_users = User.query.all()
+    print(User.age)
     return users_schema.dump(all_users)
 
 @app.route("/api/users/<id>", methods=['GET'])
