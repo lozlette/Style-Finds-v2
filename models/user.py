@@ -9,13 +9,13 @@ class User(db.Model):
     email = db.Column(db.String)
     name = db.Column(db.String)
     age = db.Column(db.Integer)
-    # date_created = db.Column(datetime, auto_now_add=True)
+    # date_created = db.Column(db.datetime, default=db.datetime.utcnow)
 
 
 class UserSchema(ma.SQLAlchemySchema):
     class Meta:
         model = User
-        fields = ("email", "age", "name")
+        fields = ("id", "email", "name", "age")
         load_instance = True
 
 user_schema = UserSchema()
