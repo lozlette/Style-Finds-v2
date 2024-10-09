@@ -7,6 +7,8 @@ class Style(db.Model):
      description = db.Column(db.String)
      style_image_url = db.Column(db.String)
      user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+     users = db.relationship("User", backref="Style")
+
 
 
 class StyleSchema(ma.SQLAlchemySchema):
